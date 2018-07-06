@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Upload Success</title>
+</head>
+<body>
+<br>
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <strong>Send ID success</strong>, below is your ID data.
+    </div>
+</div>
+<div class="container">
+    <img src=" {{url_for('send_image', filename=image_name)}}">
+    <br>
+</div>
+
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <strong>Reminder:</strong> If fail to recognize your face after you successfully upload your face photo,please clear the cookies of your browser and try again.
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Upload Failure</title>
+</head>
+<body>
+<br>
+<div class="container">
+    <div class="alert alert-danger" role="alert">
+        <strong>Send ID Fail</strong>, there must be <strong>no</strong> or <strong>more than one face</strong> detected in your image,
+        Please Check the detection result below and crop the face or change an image.
+    </div>
+</div>
+<div class="container">
+    <img src=" {{url_for('send_image', filename=image_name)}}">
+</div>
+
+
+</body>
+</html>

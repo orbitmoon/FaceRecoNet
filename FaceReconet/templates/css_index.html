@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet"
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="icon" href="/static/FaceRecognize.ico">
+    <title>FaceRecoNet</title>
+
+    <link href="sticky-footer.css" rel="stylesheet">
+
+    <style type="text/css">
+        .btn-lg {
+	        position: relative;
+	        overflow: hidden;
+        }
+        .btn-lg input {
+	        position: absolute;
+	        top: 0;
+	        right: 0;
+	        margin: 0;
+	        padding: 0;
+	        font-size: 20px;
+	        cursor: pointer;
+	        opacity: 0;
+	        filter: alpha(opacity=0);
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>FaceReco.Net</h1>
+        <p>An online deep learning based face detection and recognition system, by MTCNN and FaceNet.</p>
+    </div>
+</div>
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Pick an image first!</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Select an image whatever it is a photo or a cartoon image.</p>
+                        <br>
+                        <br>
+                        <a class="btn btn-primary btn-lg">
+                            <span class="glyphicon glyphicon-picture"></span> Pick an Image
+                            <input type="file" name="file">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Detection&Recognition:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            Using MTCNN to find the face proposals in your image
+                            and then feed it into FaceNet to get the output.
+                            Try now!
+                        </p>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-lg" value="Recognize" id="recognize" name="Recognize">
+                            <span class="glyphicon glyphicon-share-alt"></span> Recognize
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>Upload identity data:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            If you want everyone able to recognize someone in every
+                            image he/her appearance, Send us an image only contain
+                            he/her face and we will save it into the identity
+                            server.
+                        </p>
+                        <button type="submit" class="btn btn-primary btn-lg" value="SendID" id="identity" name="SendID">
+                            <span class="glyphicon glyphicon-cloud-upload"></span> SendID
+                        </button>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<footer class="footer">
+    <div class="container">
+        <address>
+            <strong>
+                South China University of Technology, SAIL lab.
+            </strong>
+            <br>
+            <strong>ST WANG, 2017</strong>
+        </address>
+    </div>
+</footer>
+<!--div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Recognize what you want now!</h3>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <br>
+                <button type="button" class="btn btn-primary btn-lg" value="Recognize" id="recognize" name="Recognize">
+                    <span class="glyphicon glyphicon-share-alt"></span>Recognize
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" value="SendID" id="identity" name="SendID">
+                    <span class="glyphicon glyphicon-user"></span>SendID
+                </button>
+                <!--input type="submit" value="Recognize" id="recognize" name="Recognize">
+                <input type="submit" value="SendID" id="identity" name="SendID">
+
+            </form>
+        </div>
+    </div>
+</div-->
+</body>
+</html>
+

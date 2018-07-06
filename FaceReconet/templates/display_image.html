@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Detect and recognize result</title>
+</head>
+<body>
+<br>
+<div class="container">
+    <div class="alert alert-success" role="alert">
+        <strong>The detection and recognition result:</strong>
+    </div>
+    <img src=" {{url_for('send_image', filename=image_name)}}">
+</div>
+
+
+</body>
+</html>
